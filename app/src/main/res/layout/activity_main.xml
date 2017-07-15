@@ -13,7 +13,7 @@
         android:background="#333"
         tools:context="com.hangox.morerecycleviewdemo.MainActivity">
 
-        <com.hangox.morerecycleviewdemo.MoreRecyclerView
+        <com.hangox.more.recycerview.MoreRecyclerView
             android:id="@+id/moreRecyclerView"
             android:layout_width="match_parent"
             bind:layoutManager="LinearLayoutManager"
