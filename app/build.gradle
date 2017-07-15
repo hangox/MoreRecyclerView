@@ -28,5 +28,4 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile project(':more-recyclerview')
     compile 'com.hangox:xLog:1.0'
-    compile 'com.nineoldandroids:library:2.4.0'
 }
