@@ -1,6 +1,5 @@
 package com.hangox.morerecycleviewdemo;
 
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.hangox.more.recycerview.MoreDelegateImp;
+import com.hangox.more.recycerview.MoreRecyclerView;
 import com.hangox.morerecycleviewdemo.databinding.ActivityMainBinding;
 import com.hangox.morerecycleviewdemo.databinding.VHolderAsyBinding;
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 },3000);
             }
         });
-        startActivity(new Intent(this,SimpleMoreListActivity.class));
+//        startActivity(new Intent(this,SimpleMoreListActivity.class));
     }
 
     private void addData(){
