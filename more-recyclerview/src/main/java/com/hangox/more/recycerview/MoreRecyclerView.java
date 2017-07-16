@@ -1,5 +1,6 @@
 package com.hangox.more.recycerview;
 
+
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -8,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-
 
 /**
  * Created With Android Studio
@@ -19,7 +19,6 @@ import android.view.ViewGroup;
  */
 public class MoreRecyclerView extends RecyclerView {
     private MoreAdapter mMoreAdapter;
-    private OnScrollListener mOutScrollListener;
 
     /**
      * 是否已经锁定在更多
@@ -39,16 +38,9 @@ public class MoreRecyclerView extends RecyclerView {
 
 
     private OnScrollListener mOnScrollListener = new OnScrollListener() {
-        @Override
-        public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-            if (mOutScrollListener != null)
-                mOutScrollListener.onScrollStateChanged(recyclerView, newState);
-
-        }
 
         @Override
         public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-            if (mOutScrollListener != null) mOutScrollListener.onScrolled(recyclerView, dx, dy);
             if (!isLockMore && checkScrollToDown() && mOnMoreListener != null  )
                 mOnMoreListener.onMoreShow(MoreRecyclerView.this);
         }
@@ -86,7 +78,7 @@ public class MoreRecyclerView extends RecyclerView {
     /**
      * 设置更多显示代理
      *
-     * @param moreDelegate
+     * @param moreDelegate 更多的代理
      */
     public void setMoreDelegate(MoreDelegate moreDelegate) {
         if (moreDelegate == null) return;
@@ -111,7 +103,7 @@ public class MoreRecyclerView extends RecyclerView {
     /**
      * 设置更多的监听器
      *
-     * @param listener
+     * @param listener 监听器
      */
     public void setMoreListener(OnMoreListener listener) {
         if (listener == null) return;
@@ -155,10 +147,6 @@ public class MoreRecyclerView extends RecyclerView {
     public boolean islockMore(){return isLockMore;}
 
 
-    @Override
-    public void setOnScrollListener(OnScrollListener listener) {
-        mOutScrollListener = listener;
-    }
 
     /**
      * 判断是否到了最后一个

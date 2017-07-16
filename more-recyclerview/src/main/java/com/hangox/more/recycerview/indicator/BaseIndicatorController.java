@@ -41,13 +41,14 @@ public abstract class BaseIndicatorController {
 
     /**
      * draw indicator
-     * @param canvas
-     * @param paint
+     * @param canvas 画板
+     * @param paint 画笔
      */
     public abstract void draw(Canvas canvas,Paint paint);
 
     /**
      * create animation or animations
+     * @return 动画集合
      */
     public abstract List<Animator> createAnimation();
 
@@ -60,7 +61,7 @@ public abstract class BaseIndicatorController {
      * view was be Visible or Gone or Invisible.
      * make animation to cancel when target view
      * be onDetachedFromWindow.
-     * @param animStatus
+     * @param animStatus 动画状态
      */
     public void setAnimationStatus(AnimStatus animStatus){
         if (mAnimators==null){

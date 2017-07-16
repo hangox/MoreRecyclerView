@@ -7,10 +7,7 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
     buildTypes {
@@ -27,16 +24,19 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 }
+
+
 ext{
     eGroup = 'com.hangox'
     eArtifactId = 'more-recyclerview'
     eName = "MoreRecyclerView"
     eDescription = ''
-    eVersion = '1.1'
+    eVersion = '1.0.1'
     eVcsUrl = 'https://github.com/hangox/MoreRecyclerView.git'
-    eVcsTag = 'v1.1' //git tag的名字,可以为空
+    eVcsTag = 'v1.0.1' //git tag的名字,可以为空
     eWebsiteUrl = 'https://github.com/hangox/MoreRecyclerView'
 }
 //这一行不用的时候建议注释掉，因为国外DNS的原因，有时候会找不到dns的,导致编译失败
